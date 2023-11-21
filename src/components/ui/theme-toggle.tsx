@@ -11,9 +11,25 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { useToast } from "@/components/ui/use-toast";
 
 export function ModeToggle() {
   const { setTheme, resolvedTheme } = useTheme();
+  const { toast } = useToast();
+
+  const handleThemeChange = (theme: string) => {
+    setTheme(theme);
+    const titles: Record<string, string> = {
+      light: "🌞",
+      dark: "🌚",
+      system: "🤖",
+    };
+
+    const title = titles[theme] || theme;
+    toast({
+      description: `Theme changed to ${theme} ${title} `,
+    });
+  };
 
   return (
     <DropdownMenu>
@@ -33,13 +49,13 @@ export function ModeToggle() {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
-        <DropdownMenuItem onClick={() => setTheme("light")}>
+        <DropdownMenuItem onClick={() => handleThemeChange("light")}>
           Light{resolvedTheme === "light" && <span className="ml-2">✓</span>}
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme("dark")}>
+        <DropdownMenuItem onClick={() => handleThemeChange("dark")}>
           Dark{resolvedTheme === "dark" && <span className="ml-2">✓</span>}
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme("system")}>
+        <DropdownMenuItem onClick={() => handleThemeChange("system")}>
           System{resolvedTheme === "system" && <span className="ml-2">✓</span>}
         </DropdownMenuItem>
       </DropdownMenuContent>
