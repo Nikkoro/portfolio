@@ -36,7 +36,7 @@ export function NavMenu() {
                     href="/about"
                   >
                     <div className="mb-2 mt-6 p-10 text-lg font-medium"></div>
-                    <h1 className=" absolute inset-x-0 top-4 mx-6 text-sm font-medium md:top-6  md:w-[100px]">
+                    <h1 className=" absolute inset-x-0 top-4 mx-6 text-sm font-medium md:top-8  md:w-[100px]">
                       About me
                     </h1>
                   </a>

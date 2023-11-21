@@ -22,8 +22,8 @@ export default function Nav() {
         <ul className="flex items-center justify-between  ">
           <Image
             src="/logo-f.svg"
-            width={50}
-            height={50}
+            width={32}
+            height={32}
             alt="logo"
             className="dark:invert "
           ></Image>
