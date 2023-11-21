@@ -1,4 +1,3 @@
-import Nav from "@/components/Nav";
 import { Button } from "@/components/ui/button";
 
 export default function Home() {
@@ -14,7 +13,7 @@ export default function Home() {
             Nikodem Domaracki
           </code>
         </h1>
-        <p> and I'm a web developer.</p>
+        <p> and I&apos;m a web developer.</p>
       </section>
       <div className="flex items-center gap-6 py-6">
         <span>Get in touch 👉</span>
