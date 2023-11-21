@@ -4,10 +4,10 @@ import { Button } from "@/components/ui/button";
 export default function Home() {
   return (
     <main className=" p-12 pt-0 lg:p-24 lg:pt-0">
-      <section className="flex flex-col gap-8 py-24 pt-0 ">
-        <h1 className="text-3xl">
+      <section className="flex flex-col gap-8 py-24 pt-0 sm:justify-items-start ">
+        <h1 className="text-2xl lg:text-3xl">
           Hi, my name is{" "}
-          <code className="px-2 py-4 font-mono text-4xl font-bold">
+          <code className="font-mono text-3xl font-bold lg:text-4xl">
             Nikodem Domaracki
           </code>
         </h1>
