@@ -19,7 +19,7 @@ export default function Projects() {
             Projects
           </h2>
           <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-            Here are some of the projects I've worked on.
+            Here are some of the projects I&apos;ve worked on.
           </p>
         </div>
         <div className="grid w-full grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
