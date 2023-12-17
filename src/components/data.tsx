@@ -1,3 +1,20 @@
+import React from "react";
+import {
+  TbBrandCss3,
+  TbBrandDocker,
+  TbBrandGit,
+  TbBrandHtml5,
+  TbBrandJavascript,
+  TbBrandNextjs,
+  TbBrandNodejs,
+  TbBrandPython,
+  TbBrandReact,
+  TbBrandSupabase,
+  TbBrandTailwind,
+  TbBrandTypescript,
+} from "react-icons/tb";
+import { SiPostman, SiStyledcomponents } from "react-icons/si";
+import { DiPostgresql } from "react-icons/di";
 interface Project {
   title: string;
   description: string;
@@ -5,6 +22,12 @@ interface Project {
   deploymentLink?: string;
   image: string;
   tags: string[];
+}
+
+interface Skills {
+  name: string;
+  knowledge?: "good" | "intermediate" | "beginner";
+  icon?: React.ReactNode;
 }
 //TODO: Populate with real projects
 const projects: Project[] = [
@@ -52,4 +75,73 @@ const projects: Project[] = [
   },
 ];
 
-export default projects;
+const skills: Skills[] = [
+  {
+    name: "Javascript",
+    icon: <TbBrandJavascript />,
+  },
+  {
+    name: "React.js",
+    icon: <TbBrandReact />,
+  },
+  {
+    name: "NextJS",
+    icon: <TbBrandNextjs />,
+  },
+  {
+    name: "TailwindCSS",
+    icon: <TbBrandTailwind />,
+  },
+  {
+    name: "NodeJS",
+    icon: <TbBrandNodejs />,
+  },
+  {
+    name: "Express",
+  },
+  {
+    name: "styled-components",
+    icon: <SiStyledcomponents stroke="" />,
+  },
+  {
+    name: "REST API",
+  },
+  {
+    name: "Supabase",
+    icon: <TbBrandSupabase />,
+  },
+  {
+    name: "Typescript",
+    icon: <TbBrandTypescript />,
+  },
+  {
+    name: "HTML",
+    icon: <TbBrandHtml5 />,
+  },
+  {
+    name: "CSS",
+    icon: <TbBrandCss3 />,
+  },
+  {
+    name: "Git",
+    icon: <TbBrandGit />,
+  },
+  {
+    name: "Docker",
+    icon: <TbBrandDocker />,
+  },
+  {
+    name: "Python",
+    icon: <TbBrandPython />,
+  },
+  {
+    name: "PostgreSQL",
+    icon: <DiPostgresql />,
+  },
+  {
+    name: "Postman",
+    icon: <SiPostman stroke="" />,
+  },
+];
+
+export { projects, skills };
