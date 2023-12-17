@@ -7,7 +7,8 @@ import {
 } from "@/components/ui/card";
 import Link from "next/link";
 import Image from "next/image";
-import projects from "./data";
+import { projects } from "./data";
+import { Badge } from "./ui/badge";
 
 //TODO: Fix spacing issues and add icons
 export default function Projects() {
@@ -24,7 +25,11 @@ export default function Projects() {
         </div>
         <div className="grid w-full grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((project) => (
-            <Card key={project.title}>
+            <Card
+              key={project.title}
+              className="transition-scale transform duration-500 
+              hover:scale-105"
+            >
               <CardHeader className="flex flex-col items-center gap-4">
                 <Image
                   alt={project.title}
@@ -41,12 +46,9 @@ export default function Projects() {
               <CardContent className="grid gap-2">
                 <div className="flex flex-wrap gap-2">
                   {project.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="rounded-md bg-accent px-2 py-1 text-sm font-medium"
-                    >
+                    <Badge variant={"outline"} className="text-sm" key={tag}>
                       {tag}
-                    </span>
+                    </Badge>
                   ))}
                 </div>
                 <Link
