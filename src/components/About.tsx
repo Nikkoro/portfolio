@@ -32,7 +32,11 @@ export default function About() {
         <a href="mailto:nikodemdomaracki@gmail.com">
           <Button>Contact me</Button>
         </a>
-        <a href="#">
+        <a
+          href="/Nikodem-Domaracki-Resume.pdf"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
           <Button variant="secondary">
             Download CV <DownloadIcon />
           </Button>
