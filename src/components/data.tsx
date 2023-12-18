@@ -51,8 +51,8 @@ const projects: Project[] = [
   {
     title: "uncharted-waters-bot",
     description:
-      "Discord bot for mobile game. Update Google Sheet with event related data from screenshots.",
-    githubLink: "https://github.com/nikkoro/aniBASE",
+      "Discord bot for mobile game. Update Google sheet with power of OCR.",
+    githubLink: "https://github.com/nikkoro/uncharted-waters-bot",
     image: "/uw-gif.gif",
     tags: ["Node.js", "Discord.js", "Tesseract.js", "Google Sheets API"],
   },

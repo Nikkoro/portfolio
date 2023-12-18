@@ -4,9 +4,17 @@ import { ModeToggle } from "./ui/theme-toggle";
 import { NavMenu } from "./NavMenu";
 import Image from "next/image";
 import { motion, useScroll } from "framer-motion";
+import { useTheme } from "next-themes";
+import { useState, useEffect } from "react";
 
 export default function Nav() {
   const { scrollYProgress } = useScroll();
+  const { theme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => setMounted(true), []);
+
+  if (!mounted) return null;
 
   return (
     <header className="fixed top-0 z-50 w-screen border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 md:pr-0 xl:pr-4 ">
@@ -22,7 +30,7 @@ export default function Nav() {
               width={32}
               height={32}
               alt="logo"
-              className="dark:invert"
+              className={`dark:invert ${theme === "green" ? "invert" : ""}`}
             ></Image>
           </li>
           <li>
