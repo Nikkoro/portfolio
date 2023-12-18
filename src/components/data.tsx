@@ -81,7 +81,7 @@ const skills: Skills[] = [
     icon: <TbBrandJavascript />,
   },
   {
-    name: "React.js",
+    name: "React",
     icon: <TbBrandReact />,
   },
   {
@@ -89,7 +89,7 @@ const skills: Skills[] = [
     icon: <TbBrandNextjs />,
   },
   {
-    name: "TailwindCSS",
+    name: "Tailwind",
     icon: <TbBrandTailwind />,
   },
   {
