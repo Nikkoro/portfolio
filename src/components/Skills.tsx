@@ -8,20 +8,17 @@ import { motion } from "framer-motion";
 
 export default function Skills() {
   const variants = {
-    out: {
+    initial: {
       opacity: 0,
-      x: -100,
-      transition: {
-        duration: 0.2,
-      },
+      y: -100,
     },
-    in: {
+    animate: (index: number) => ({
       opacity: 1,
-      x: 0,
+      y: 0,
       transition: {
-        duration: 0.6,
+        delay: 0.05 * index,
       },
-    },
+    }),
   };
   return (
     <IconContext.Provider
@@ -39,14 +36,14 @@ export default function Skills() {
           </div>
           <Card>
             <CardContent className="flex flex-wrap justify-center p-2">
-              {skills.map((skill) => (
+              {skills.map((skill, index) => (
                 <motion.li
                   variants={variants}
-                  animate="in"
-                  initial="out"
-                  exit="out"
+                  initial="initial"
+                  whileInView="animate"
                   className="list-none"
-                  key={skill.name}
+                  custom={index}
+                  key={index}
                 >
                   <Badge
                     variant={"secondary"}
