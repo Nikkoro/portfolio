@@ -4,9 +4,9 @@ import { GitHubLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
 import { useTheme } from "next-themes";
 
 export default function Footer() {
+  const { resolvedTheme } = useTheme();
   //TODO: find a better way to handle this
   const handleThemeChange = () => {
-    const { resolvedTheme } = useTheme();
     let message;
 
     switch (resolvedTheme) {
