@@ -5,7 +5,7 @@ import { useTheme } from "next-themes";
 
 export default function Footer() {
   //TODO: find a better way to handle this
-  function handleThemeChange() {
+  const handleThemeChange = () => {
     const { resolvedTheme } = useTheme();
     let message;
 
@@ -21,7 +21,7 @@ export default function Footer() {
         break;
     }
     return message;
-  }
+  };
 
   return (
     <footer className="bottom-0 z-50 w-full border-t bg-background">
