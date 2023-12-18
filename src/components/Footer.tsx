@@ -28,14 +28,15 @@ export default function Footer() {
       <div className="container py-2 ">
         <ul className="flex items-center justify-between">
           <li>
-            <span>Made with ❤️ by nikodemdomaracki</span>
+            <span className="text-sm">
+              Made with ❤️ by{" "}
+              <span className="border-b-2 border-primary">nikko</span>
+            </span>
           </li>
-          <li>
+          <li className="mr-0 flex gap-2">
             <a href="https://github.com/Nikkoro" aria-label="Link to my github">
               <GitHubLogoIcon className="h-8 w-8" />
             </a>
-          </li>
-          <li>
             <a
               href="https://www.linkedin.com/in/nikodemdomaracki/"
               aria-label="Link to my linkedin"
