@@ -13,15 +13,15 @@ export default function Skills() {
         style: { strokeWidth: 1.2 },
       }}
     >
-      <section className="w-full py-8  md:py-12" id="skills">
+      <section className="w-full py-8 md:py-12" id="skills">
         <div className="container grid items-center justify-center gap-4 px-0 text-center  lg:gap-10">
           <div className="space-y-3">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-              Skills dupa
+              Skills
             </h2>
           </div>
           <Card>
-            <CardContent className="flex flex-wrap p-2">
+            <CardContent className="flex flex-wrap justify-center p-2">
               {skills.map((skill) => (
                 <Badge
                   variant={"secondary"}
