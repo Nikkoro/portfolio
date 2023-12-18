@@ -4,8 +4,22 @@ import { skills } from "./data";
 import { Badge } from "./ui/badge";
 import { Card, CardContent } from "./ui/card";
 import { IconContext } from "react-icons";
+import { motion } from "framer-motion";
 
 export default function Skills() {
+  const variants = {
+    initial: {
+      opacity: 0,
+      y: -100,
+    },
+    animate: (index: number) => ({
+      opacity: 1,
+      y: 0,
+      transition: {
+        delay: 0.05 * index,
+      },
+    }),
+  };
   return (
     <IconContext.Provider
       value={{
@@ -22,16 +36,26 @@ export default function Skills() {
           </div>
           <Card>
             <CardContent className="flex flex-wrap justify-center p-2">
-              {skills.map((skill) => (
-                <Badge
-                  variant={"secondary"}
-                  className="m-2 items-center text-sm lg:text-lg"
-                  key={skill.name}
+              {skills.map((skill, index) => (
+                <motion.li
+                  variants={variants}
+                  initial="initial"
+                  whileInView="animate"
+                  className="list-none"
+                  viewport={{ once: true }}
+                  custom={index}
+                  key={index}
                 >
-                  {skill.icon}
-                  &nbsp;
-                  {skill.name}
-                </Badge>
+                  <Badge
+                    variant={"secondary"}
+                    className="m-2 items-center text-sm lg:text-lg"
+                    key={skill.name}
+                  >
+                    {skill.icon}
+                    &nbsp;
+                    {skill.name}
+                  </Badge>
+                </motion.li>
               ))}
             </CardContent>
           </Card>

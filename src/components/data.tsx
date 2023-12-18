@@ -15,7 +15,7 @@ import {
 } from "react-icons/tb";
 import { SiPostman, SiStyledcomponents } from "react-icons/si";
 import { DiPostgresql } from "react-icons/di";
-interface Project {
+export interface Project {
   title: string;
   description: string;
   githubLink: string;
@@ -90,16 +90,16 @@ const skills: Skills[] = [
     name: "NodeJS",
     icon: <TbBrandNodejs />,
   },
-  {
-    name: "Express",
-  },
+  //   {
+  //     name: "Express",
+  //   },
   {
     name: "styled-components",
     icon: <SiStyledcomponents stroke="" />,
   },
-  {
-    name: "REST API",
-  },
+  //   {
+  //     name: "REST API",
+  //   },
   {
     name: "Supabase",
     icon: <TbBrandSupabase />,

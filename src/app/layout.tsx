@@ -28,9 +28,9 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className="scroll-p-14 !scroll-smooth"
+      className="scroll-p-14 overflow-x-hidden !scroll-smooth"
     >
-      <body className={inter.className}>
+      <body className={`overflow-x-hidden ${inter.className}`}>
         <ThemeProvider attribute="class" defaultTheme="system">
           <Nav />
           {children}
