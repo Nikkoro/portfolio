@@ -42,6 +42,7 @@ export default function Skills() {
                   initial="initial"
                   whileInView="animate"
                   className="list-none"
+                  viewport={{ once: true }}
                   custom={index}
                   key={index}
                 >
