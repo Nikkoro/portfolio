@@ -36,42 +36,36 @@ const projects: Project[] = [
     description:
       "A web app for tracking anime you are watching or have watched.",
     githubLink: "https://github.com/nikkoro/aniBASE",
-    deploymentLink: "https://project1.com",
-    image: "/anibase-snapshot.png",
-    tags: ["React", "TypeScript", "TailwindCSS", "NextJS"],
+    deploymentLink: "https://ani-base.vercel.app",
+    image: "/ani-base.png",
+    tags: ["React", "Javascript", "localstorage", "Vite", "Jikan API"],
   },
   {
-    title: "aniBASE 2",
+    title: "Portfolio",
+    description: " A portfolio website that you are currently looking at.",
+    githubLink: "https://github.com/nikkoro/portfolio",
+    deploymentLink: "https://domaracki-portfolio.vercel.app/",
+    image: "/light-portfolio.png",
+    tags: ["NextJS", "Typescript", "TailwindCSS", "shadcn-ui"],
+  },
+  {
+    title: "uncharted-waters-bot",
     description:
-      "A web app for tracking anime you are watching or have watched.",
+      "Discord bot for mobile game. Update Google Sheet with event related data from screenshots.",
     githubLink: "https://github.com/nikkoro/aniBASE",
-    deploymentLink: "https://project1.com",
-    image: "/anibase-snapshot.png",
-    tags: ["React", "TypeScript", "TailwindCSS", "NextJS"],
+    image: "/uw-gif.gif",
+    tags: ["Node.js", "Discord.js", "Tesseract.js", "Google Sheets API"],
   },
   {
-    title: "Project 3",
-    description: "Description of Project 3",
-    githubLink: "https://github.com/user/project3",
-    deploymentLink: "https://project3.com",
-    image: "/anibase-snapshot.png",
-    tags: ["React", "TypeScript", "TailwindCSS", "NextJS"],
-  },
-  {
-    title: "Project 4",
-    description: "Description of Project 4",
-    githubLink: "https://github.com/user/project4",
-    deploymentLink: "https://project4.com",
-    image: "/anibase-snapshot.png",
-    tags: ["React", "TypeScript", "TailwindCSS", "NextJS"],
-  },
-  {
-    title: "Project 5",
-    description: "Description of Project 5",
-    githubLink: "https://github.com/user/project5",
-    deploymentLink: "https://project5.com",
-    image: "/anibase-snapshot.png",
-    tags: ["React", "TypeScript", "TailwindCSS", "NextJS"],
+    title: "codeStats",
+    description: `A group project developed during the studies. It was
+    created to generate and standardize reports from git
+    repositories so teachers could easily see who
+    contributed enough. 
+    `,
+    githubLink: "https://github.com/maneike/codeStats",
+    image: "/codestats.png",
+    tags: ["Preact", "Javascript", "emotion", "Vite", "Django"],
   },
 ];
 
