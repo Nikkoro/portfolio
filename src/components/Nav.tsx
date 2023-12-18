@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export default function Nav() {
   return (
-    <header className="fixed top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="fixed top-0  z-50 w-screen border-b bg-background/95 pr-4 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <nav className="container py-2 ">
         <ul className="flex items-center justify-between">
           <li>
