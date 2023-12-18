@@ -37,10 +37,16 @@ export default function About() {
             Download CV <DownloadIcon />
           </Button>
         </a>
-        <a href="https://github.com/Nikkoro">
-          <GitHubLogoIcon className="h-8 w-8" />
+
+        <a href="https://github.com/Nikkoro" aria-label="Link to my github">
+          <span>
+            <GitHubLogoIcon className="h-8 w-8" />
+          </span>
         </a>
-        <a href="https://www.linkedin.com/in/nikodemdomaracki/">
+        <a
+          href="https://www.linkedin.com/in/nikodemdomaracki/"
+          aria-label="Link to my linkedin"
+        >
           <LinkedInLogoIcon className="h-8 w-8" />
         </a>
       </div>
