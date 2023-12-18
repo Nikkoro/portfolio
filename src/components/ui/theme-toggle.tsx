@@ -12,16 +12,23 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { useToast } from "@/components/ui/use-toast";
+import { useState, useEffect } from "react";
 
 export function ModeToggle() {
-  const { setTheme, resolvedTheme } = useTheme();
+  const { theme, setTheme, resolvedTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
   const { toast } = useToast();
+
+  useEffect(() => setMounted(true), []);
+
+  if (!mounted) return null;
 
   const handleThemeChange = (theme: string) => {
     setTheme(theme);
     const titles: Record<string, string> = {
       light: "🌞",
       dark: "🌚",
+      green: "🍃",
       system: "🤖",
     };
 
@@ -43,7 +50,7 @@ export function ModeToggle() {
       <DropdownMenuContent align="end">
         <DropdownMenuItem onClick={() => handleThemeChange("light")}>
           Light
-          {resolvedTheme === "light" && (
+          {theme === "light" && (
             <span className="ml-2">
               <TbCheck />
             </span>
@@ -51,7 +58,15 @@ export function ModeToggle() {
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => handleThemeChange("dark")}>
           Dark
-          {resolvedTheme === "dark" && (
+          {theme === "dark" && (
+            <span className="ml-2">
+              <TbCheck />
+            </span>
+          )}
+        </DropdownMenuItem>
+        <DropdownMenuItem onClick={() => handleThemeChange("green")}>
+          Green
+          {theme === "green" && (
             <span className="ml-2">
               <TbCheck />
             </span>
@@ -59,7 +74,7 @@ export function ModeToggle() {
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => handleThemeChange("system")}>
           System
-          {resolvedTheme === "system" && (
+          {theme === "system" && (
             <span className="ml-2">
               <TbCheck />
             </span>

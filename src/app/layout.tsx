@@ -31,7 +31,11 @@ export default function RootLayout({
       className="scroll-p-14 overflow-x-hidden !scroll-smooth"
     >
       <body className={`overflow-x-hidden ${inter.className}`}>
-        <ThemeProvider attribute="class" defaultTheme="system">
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          themes={["light", "dark", "green"]}
+        >
           <Nav />
           {children}
           <Toaster />
