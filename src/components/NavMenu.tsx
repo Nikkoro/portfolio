@@ -31,9 +31,9 @@ export function NavMenu() {
           </NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className=" grid gap-3 p-4  md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-              <ListItem href="#about" title="About me">
+              {/* <ListItem href="#about" title="About me">
                 Read more about me
-              </ListItem>
+              </ListItem> */}
               <ListItem href="#projects" title="Projects">
                 Some of my projects
               </ListItem>

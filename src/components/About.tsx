@@ -3,13 +3,12 @@ import {
   GitHubLogoIcon,
   LinkedInLogoIcon,
   DownloadIcon,
-  EnvelopeOpenIcon,
 } from "@radix-ui/react-icons";
 
 export default function About() {
   return (
     <section
-      className="flex flex-col gap-8 py-8 sm:justify-items-start "
+      className="flex flex-col gap-8 py-8 pt-20 sm:justify-items-start "
       id="#about"
     >
       <p className="text-3xl font-bold lg:text-5xl ">
