@@ -46,6 +46,7 @@ export default function Skills() {
                   initial="out"
                   exit="out"
                   className="list-none"
+                  key={skill.name}
                 >
                   <Badge
                     variant={"secondary"}
