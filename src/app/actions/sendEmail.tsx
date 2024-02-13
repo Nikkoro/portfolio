@@ -3,6 +3,8 @@ import { formSchema } from "@/lib/schema";
 import { Resend } from "resend";
 import * as z from "zod";
 import ContactFormEmail from "@/components/emails/contact-form";
+import Confirmation from "@/components/emails/confirmation";
+import { render } from "jsx-email";
 
 type Inputs = z.infer<typeof formSchema>;
 
@@ -13,16 +15,25 @@ export const sendEmail = async (data: Inputs) => {
 
   if (result.success) {
     const { email, message } = result.data;
+    const template = <Confirmation email={email} message={message} />;
+    const html = await render(template);
     try {
-      const data = await resend.emails.send({
-        from: "nikodem@domaracki.tech",
+      const ownerEmail = await resend.emails.send({
+        from: "Nikodem <nikodem@domaracki.tech>",
         to: ["nikodemdomaracki@gmail.com"],
         subject: "Contact form submission",
-        text: `Email: ${email}\nMessage: ${message}`,
+        text: `from ${email} \n\n ${message}`,
         react: ContactFormEmail({ email, message }),
       });
 
-      return { success: true, data };
+      const confirmationEmail = await resend.emails.send({
+        from: "Nikodem <nikodem@domaracki.tech>",
+        to: [email],
+        subject: "Contact form confirmation",
+        html,
+      });
+
+      return { success: true, ownerEmail, confirmationEmail };
     } catch (error) {
       return { success: false, error };
     }
