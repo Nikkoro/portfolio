@@ -22,6 +22,7 @@ export const metadata: Metadata = {
     type: "website",
     title: "Nikodem Domaracki | Frontend Developer",
     description: "Web developer 💻",
+    url: "https://domaracki.tech",
     images: [
       {
         url: "/api/og",
